@@ -1,0 +1,12 @@
+<ion-view view-title="{{ place.name }}">
+  <ion-content>
+    <div class="row">
+      <div class="col">
+        <div class="place-logo">
+          <img ng-src="{{ place.icon }}"/>
+        </div>
+        <p ng-bind-html="place.adr_address"></p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

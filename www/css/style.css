@@ -1,0 +1,137 @@
+/* Empty. Add your own CSS if you like */
+div.location-item {
+	background-color: #F2F2F2;
+	
+}
+.location-final-item{
+	padding-left: 2px;
+}
+.item h3.location-name .away {
+    float: right;
+    margin-left: 8px;
+    height: 16px;
+    color: #666666;
+    font-size: 11px;
+}
+.item h3.location-name {
+	margin-left:8px;
+	height:14px;
+	color:#222222;
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+.header-item{
+  text-align: centre;
+}
+
+.location-desc {
+    margin-left: 8px;
+    color: #666666;
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.location-results-list .location-item .bottom-cont{
+	display:block !important;
+	margin-left:8px !important;	
+}
+
+
+.location-results-list .location-item .bottom-cont .not-availabile {
+  color:#E34932;
+  font-size: 11px;
+  height:18px;
+}
+.location-results-list .location-item .bottom-cont .availability {
+	color:#3CA95C;
+	font-size: 11px;
+	height:18px;
+}
+
+.waiting {
+	color:#666666;
+	font-size: 11px;
+	font-style: italic;
+	height:16px;
+	float:right;
+	margin-right: 8px;
+
+}
+.searchclass {
+  margin: 0 !important;
+  position: relative;
+  top: 11px;
+  z-index: 9999;
+  -webkit-transition: height .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 0;
+  opacity: 0;
+}
+.searchclass.active {
+  height: 49px;
+  opacity: 1;
+}
+
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left:15px;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.feedback {
+	margin-top:10px;
+}
+.feedback .feedbacktext {	
+	color: #3CA95C;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    font-weight:bold;
+    /* margin-top: 0px; */
+
+}
+.waitingtext {
+		color: #666666;
+    font-size: 11px;
+    text-align: center;
+    display: block;
+
+}
+.button-bar {
+  padding: 0px 0px 10px 0px;
+}
+.button-bar > .button{
+  border: 1px solid #cfcfcf;
+  font-size: 12px
+}
+
+.button-bar > .button:last-child {
+  border-radius: 0px 20px 20px 0px !important;
+}
+.button-bar > .button:first-child {
+    border-radius: 20px 0px 0px 20px !important;
+}
+.button-block{
+  font-size:12px;
+  font-weight:bold;
+  margin-top:-5px !important;
+}
+
+
+
+.loading-container {
+  right:18px !important;
+  left:18px !important;
+}

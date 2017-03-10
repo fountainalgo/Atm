@@ -1,0 +1,76 @@
+<ion-view view-title="Find an ATM">
+  <ion-content class="example-content">
+    <!--<div class="row geolocation-row">
+      <div class="col col-center">
+        <button class="geolocation-button button button-block button-positive" ng-click="tryGeoLocation()">
+          Try the Geo Location feature!
+        </button>
+      </div>
+    </div> -->
+    <div class="row row-no-padding map-row">
+      <div class="col map-col">
+        <div class="search-container">
+          <div class="list list-inset search-input-outer">
+            <label class="item item-input search-box">
+              <i class="icon ion-ios-search placeholder-icon"></i>
+              <input ng-model="search.input" type="text" placeholder="Find an ATM" ng-change="getPlacePredictions(search.input)" ng-click="changeposition()" focus-me focus-me-disable={{disableFlag}}  />
+            </label>
+          </div>
+          <div ng-show="predictions.length > 0" class="row row-no-padding search-results">
+            <div class="col">
+              <div class="list location-results-list">
+                <div ng-repeat="prediction in predictions" class="item item-icon-left location-item" ng-click="selectSearchResult(prediction)">
+                  <i class="icon ion-location"></i>
+                  <h3 class="location-name">{{prediction.terms[0].value}}</h3>
+                  <span class="location-desc">{{prediction.description}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="" data-tap-disabled="true">
+        <div class="row row-no-padding">
+            <div class="col">
+              <div class="list location-results-list">
+                <div ng-repeat="place in nearby_places | orderBy:'away'" class="item item-icon-left location-item location-final-item">
+                <div ng-click="toggleGroup(place)" ng-class="{active: isGroupShown(place)}">
+                      <i class="icon ion-atm"></i>
+                      <h3 class="location-name"><span>{{place.name}}</span><span class="away">{{place.away | kilometers:2}}</span> </h3>
+                      <span class="location-desc">{{place.formatted_address}}</span>
+                      <span class="bottom-cont">
+                          <span ng-class="switchAvailabiltyClass(place.cash_availability)" ><span style="color:#666666">Cash</span>: <span>{{place.cash_availability}}</span><span ng-if="place.cash_availability=='Available'"> | {{place.waiting}}</span></span>  
+                          <span class="waiting">Updated - {{place.updated}} </span>
+                      </span>
+                      
+                  </div>
+                  <ion-item class="item-accordion feedback" ng-show="isGroupShown(place)">
+                            <span class="feedbacktext">Share Your Feedback with others</span>
+                            <div class="button-bar">
+                              <a grouped-radio="'Available'" ng-model="place.cash">Cash Available</a>
+                              <a grouped-radio="'Not Available'" ng-model="place.cash">Cash Not Available  </a>
+                            </div>
+                            <div class="range range-assertive" style="padding:0px;margin-top: -14px;">
+                                <i class="icon ion-clock" style="position:relative;left:0px;"></i>
+                                <input type="range" min="0" max="{{place.waitingtime.max}}" value="{{place.waitingtime.min}}" step="5" ng-model="place.waitingtime.value">
+                                {{place.waitingtime.value}}
+                                /{{place.waitingtime.max}} mins
+                                
+                            </div>
+                            <span class="feedbacktext" style="margin-top:-34px;color:#3CA95C;color: #666666;font-size: 11px;font-weight:normal;">Waiting Time</span>
+                            <button class="button button-block button-calm" ng-click="sharefeedback(place);">Submit</button>
+
+    </ion-item>
+                            
+                  </ion-item>
+
+                </div>
+              </div>
+            </div>
+          </div>              
+
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
